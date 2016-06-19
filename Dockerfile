@@ -7,6 +7,6 @@ RUN git clone git://github.com/openstack-dev/devstack.git
 WORKDIR devstack
 RUN ls
 RUN pwd
-RUN . ./openrc admin
+RUN [ ".", "openrc", "admin" ]
 COPY localrc /opt/devstack
-RUN ./stack.sh
+RUN [ "./stack.sh" ]
