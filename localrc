@@ -1,0 +1,10 @@
+MYSQL_PASSWORD=stack
+ADMIN_PASSWORD=stack
+SERVICE_PASSWORD=stack
+RABBIT_PASSWORD=stack
+SERVICE_TOKEN=stack
+
+enable_service ceilometer-acompute
+enable_service ceilometer-acentral
+enable_service ceilometer-collector
+enable_service ceilometer-api
