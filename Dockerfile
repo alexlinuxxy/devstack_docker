@@ -16,5 +16,12 @@ USER stack
 RUN git clone git://github.com/openstack-dev/devstack.git
 COPY localrc $TOP_DIR/devstack
 WORKDIR devstack
+RUN export TERM=xterm
+RUN lsmod | grep nat
+RUN lsmod | grep iptable
+RUN modprobe ip_tables
+RUN modprobe ip_conntrack
+RUN modprobe iptable_filter
+RUN modprobe ipt_state
 RUN [ "/usr/bin/env", "bash", "openrc", "admin" ]
 RUN [ "/usr/bin/env", "bash", "stack.sh" ]
