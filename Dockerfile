@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM ubuntu:14.04.4
 MAINTAINER Alex Huang "nikshuang@163.com"
 ENV REFRESHED_AT 2016-6-19
 
