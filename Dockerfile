@@ -3,7 +3,7 @@ MAINTAINER Alex Huang "nikshuang@163.com"
 ENV REFRESHED_AT 2016-6-19
 
 RUN apt-get update
-RUN apt-get install git sudo -y
+RUN apt-get install git sudo linux-image-extra-4.4.0-21-generic -y
 
 RUN useradd -m stack
 RUN echo "stack:stack" | chpasswd
