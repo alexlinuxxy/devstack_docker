@@ -4,6 +4,10 @@ ENV REFRESHED_AT 2016-6-19
 
 RUN useradd -m stack
 RUN echo "stack:stack" | chpasswd
+RUN chmod +w /etc/sudoers
+RUN sed -i '/^root/astack	ALL=(ALL:ALL) NOPASSWD:NOPASSWD:ALL' /etc/sudoers
+RUN chmod -w /etc/sudoers
+
 ENV TOP_DIR /home/stack
 
 WORKDIR $TOP_DIR
