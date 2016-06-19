@@ -4,7 +4,9 @@ ENV REFRESHED_AT 2016-6-19
 
 WORKDIR /opt
 RUN git clone git://github.com/openstack-dev/devstack.git
-WORKDIR /opt/devstack
-RUN . openrc admin
+WORKDIR devstack
+RUN ls
+RUN pwd
+RUN . ./openrc admin
 COPY localrc /opt/devstack
 RUN ./stack.sh
